@@ -59,6 +59,7 @@ ArticleSchema.pre('save', async function (next) {
 
                 // Upload new coverImage to Cloudinary
                 const uploadResult = await uploadImageToCloudinary(this.coverImage);
+                await fs.promises.unlink(this.coverImage)
 
                 if (uploadResult && uploadResult.public_id && uploadResult.secure_url) {
                     this.cloudinaryId = uploadResult.public_id;

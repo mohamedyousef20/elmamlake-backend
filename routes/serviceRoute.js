@@ -15,7 +15,7 @@ router.get('/', allService)
 // router.delete('/:id', deleteCompany)
 // router.use(verifyToken)
 
-router.post('/', adminAuthMiddleware ,uploadImag, resizeImage, createService)
+router.post('/',uploadImag, resizeImage, createService)
 router.delete('/delete',deleteService)
 router.patch('/update',updateService)
 

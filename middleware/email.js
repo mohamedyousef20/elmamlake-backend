@@ -18,7 +18,7 @@ export default async function sendEmailHandler(req, res) {
     const mailOptions = {
         // Use a valid sender email address
         from: email,
-        to: 'ahlawy555555@gmail.com',
+        to: process.env.EMAIL_USER,
         subject: `New Message: ${subject}`,
         text: `
       Name: ${name}
