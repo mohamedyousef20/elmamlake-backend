@@ -1,0 +1,11 @@
+app = "elmamlake-backend"
+
+[build]
+  dockerfile = "Dockerfile"  # if you're using a Dockerfile
+
+[env]
+  PORT = "8080"  # or the port your app uses
+
+# Optionally, configure regions or other settings
+[experimental]
+  auto_rollback = true
